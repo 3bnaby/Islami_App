@@ -16,8 +16,12 @@
 
         <!-- Status bar color -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
 
-
+    <style name="app_bar_text_style">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/light_black</item>
     </style>
 
     <style name="Theme.Islami_App" parent="Base.Theme.Islami_App" />
