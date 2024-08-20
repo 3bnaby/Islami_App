@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.islami_app.databinding.ItemChapterBinding
 import com.example.islami_app.ui.model.Chapter
 
-class ChaptersAdapter(val chapters : List<Chapter>) :
+class ChaptersAdapter(val chapters : List<Chapter> , val onChapterClick : (Chapter,Int) -> Unit) :
     Adapter<ChaptersAdapter.ChaptersViewHolder>() {
 
 
@@ -28,5 +28,8 @@ class ChaptersAdapter(val chapters : List<Chapter>) :
         val chapter = chapters[position]
         holder.binding.chapterNameTv.text = chapter.name
         holder.binding.chapterVersesTv.text= chapter.versesNumber.toString()
+        holder.binding.root.setOnClickListener{
+            onChapterClick(chapter,position)
+        }
     }
 }
