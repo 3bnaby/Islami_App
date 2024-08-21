@@ -31,5 +31,16 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+    <style name="content_style">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:textAlignment">center</item>
+        <item name="paddingStart">10dp</item>
+        <item name="paddingEnd">20dp</item>
+
+
+    </style>
+
     <style name="Theme.Islami_App" parent="Base.Theme.Islami_App" />
 </resources>

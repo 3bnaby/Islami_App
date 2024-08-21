@@ -10,4 +10,6 @@
     <string name="chapter">Chapter</string>
     <string name="verses">Verses</string>
     <string name="quraan_screen_logo">quraan_screen_logo</string>
+    <string name="tasbeh_count">عدد التسبيحات</string>
+    <string name="sebha_logo">sebha_logo</string>
 </resources>

@@ -24,12 +24,14 @@ class ChapterDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityChapterDetailsBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
 
         fileName = intent.getStringExtra(QuraanFragment.FILE_NAME)!!
         suraName =intent.getStringExtra(QuraanFragment.SURA_NAME)!!
         readFile()
         binding.chapterContentTv.text = chapterContent
+
+        setContentView(binding.root)
 
 
     }

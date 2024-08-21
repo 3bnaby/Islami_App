@@ -37,9 +37,9 @@ class QuraanFragment : Fragment() {
         chaptersAdapter = ChaptersAdapter(Constants.chapters){ chapter, index ->
 
             val intent = Intent(requireActivity() , ChapterDetailsActivity::class.java)
+            intent.putExtra( SURA_NAME , chapter.name)
+            intent.putExtra( FILE_NAME , "${index + 1}.txt")
             startActivity(intent)
-            intent.putExtra( FILE_NAME , chapter.name)
-            intent.putExtra( SURA_NAME , "${index + 1}.txt")
 
 
         }
