@@ -55,9 +55,7 @@ class SebhaFragment : Fragment() {
         }
     }
     fun changeTasbeh (){
-        i++
-        binding.tasbehCounterBtn.text = array[i]
-                Log.d("tasbeh", "changeTasbeh:${binding.tasbehCounterBtn.text} ")
+
 
             }
         }
