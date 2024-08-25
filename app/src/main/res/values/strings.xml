@@ -12,4 +12,10 @@
     <string name="quraan_screen_logo">quraan_screen_logo</string>
     <string name="tasbeh_count">عدد التسبيحات</string>
     <string name="sebha_logo">sebha_logo</string>
+    <array name="azkarList">
+        <item>سبحان الله</item>
+        <item>الحمد لله</item>
+        <item>لا اله الا الله </item>
+        <item>الله اكبر</item>
+    </array>
 </resources>

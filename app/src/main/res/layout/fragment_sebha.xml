@@ -8,7 +8,7 @@
     android:background="@drawable/main_background"
     >
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/sebha_fragment_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -19,7 +19,7 @@
         android:id="@+id/head_sebha_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/sebha_fragment_guideline"
         app:layout_constraintStart_toStartOf="@id/sebha_logo"
         app:layout_constraintEnd_toEndOf="@id/sebha_logo"
         android:layout_marginBottom="45dp"
@@ -59,13 +59,13 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/tasbeh_counter_bg"
         android:text="0"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@color/light_black"
         />
     <TextView
-        android:id="@+id/zekt_tv"
+        android:id="@+id/zekr_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,6 +73,7 @@
         app:layout_constraintTop_toBottomOf="@id/tasbeh_counter_tv"
         android:layout_marginTop="20dp"
         tools:text="سبحان الله"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:background="@drawable/zekr_tv_bg"
         android:paddingHorizontal="15dp"

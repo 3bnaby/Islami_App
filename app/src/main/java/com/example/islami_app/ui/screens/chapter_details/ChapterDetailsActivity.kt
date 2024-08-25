@@ -30,6 +30,7 @@ class ChapterDetailsActivity : AppCompatActivity() {
         suraName =intent.getStringExtra(QuraanFragment.SURA_NAME)!!
         readFile()
         binding.chapterContentTv.text = chapterContent
+        binding.suraNameTv.text = "سورة $suraName"
 
         setContentView(binding.root)
 

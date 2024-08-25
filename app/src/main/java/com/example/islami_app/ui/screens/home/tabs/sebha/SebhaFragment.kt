@@ -13,18 +13,18 @@ import kotlin.math.log
 
 
 class SebhaFragment : Fragment() {
-    lateinit var binding : FragmentSebhaBinding
-    var tasbehCounter =0
-    var array = arrayOf("الحمدلله","الله اكبر","سبحان الله","لا اله الا الله")
-    var i = 0
-
+    lateinit var binding: FragmentSebhaBinding
+    lateinit var azkarList: MutableList<String>
+    var tasbehCounter = 0
+    var currentIndex = 0
+    var currentRotation = 0.0
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSebhaBinding.inflate(inflater,container,false)
+        binding = FragmentSebhaBinding.inflate(inflater, container, false)
         return binding.root
 
 
@@ -32,32 +32,34 @@ class SebhaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tasbehCounterBtn.text = array[i]
-        countTasbeh ()
+        azkarList = resources.getStringArray(R.array.azkarList).toMutableList()
+        binding.zekrTv.text = azkarList[0]
+        onSebhaClick()
 
     }
 
-    fun countTasbeh (){
-        binding.tasbehCounterBtn.setOnClickListener {
+    fun onSebhaClick() {
+        binding.sebhaLogo.setOnClickListener {
+            rotateSebha()
             if (tasbehCounter < 33) {
                 tasbehCounter++
-                binding.tasbehCounterTv.text = tasbehCounter.toString()
-                Log.d("changeTasbeh", "changeTasbeh:$tasbehCounter ")
-            } else{
-                tasbehCounter = 0
-                if(i <= array.size){
-                changeTasbeh()
-                }
-                else{
-                    countTasbeh()
-                }
+            } else {
+              changeZekr()
             }
+            binding.tasbehCounterTv.text = tasbehCounter.toString()
         }
+
     }
-    fun changeTasbeh (){
+    fun rotateSebha(){
+        currentRotation += (-360/33)
+        binding.sebhaLogo.rotation = currentRotation.toFloat()
+    }
 
+    fun changeZekr() {
+        tasbehCounter = 0
+        currentIndex = if (currentIndex < azkarList.size - 1)++currentIndex else 0
+        binding.zekrTv.text = azkarList[currentIndex]
+    }
 
-            }
-        }
-
+}
 
