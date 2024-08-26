@@ -12,6 +12,8 @@
     <string name="quraan_screen_logo">quraan_screen_logo</string>
     <string name="tasbeh_count">عدد التسبيحات</string>
     <string name="sebha_logo">sebha_logo</string>
+    <string name="channel_name">radio channel</string>
+    <string name="channel_description">radio notifications</string>
     <array name="azkarList">
         <item>سبحان الله</item>
         <item>الحمد لله</item>

@@ -37,7 +37,7 @@
         android:id="@+id/play_icon"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:src="@drawable/play_icon"
+        android:src="@drawable/sura_icon"
         app:layout_constraintEnd_toEndOf="@id/sura_name_underline"
         app:layout_constraintTop_toTopOf="@id/sura_name_tv"
         app:layout_constraintBottom_toBottomOf="@id/sura_name_tv"

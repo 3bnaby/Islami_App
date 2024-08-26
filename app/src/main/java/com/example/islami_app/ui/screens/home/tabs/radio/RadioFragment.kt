@@ -1,5 +1,7 @@
 package com.example.islami_app.ui.screens.home.tabs.radio
 
+import android.media.AudioAttributes
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +16,7 @@ class RadioFragment : Fragment() {
 
     lateinit var binding : FragmentRadioBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,4 +24,16 @@ class RadioFragment : Fragment() {
         binding = FragmentRadioBinding.inflate(inflater,container,false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+
+    }
+
+
+
+
+
 }
